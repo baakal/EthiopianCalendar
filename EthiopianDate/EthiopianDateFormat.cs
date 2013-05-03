@@ -8,7 +8,7 @@ namespace BaakalDate
 {
     public class EthiopianDateFormat
     {
-       static readonly string[] Months = {"Unknown Months", "mekerem", " tekemte", "hedar", "tahsas", "t'er", "yekatit", "megabit", "miazia", "genbot", "senei", "Hamlei", "Nehassei", "pagumein" };
+        static readonly string[] Months = { "Unknown Months", "መስከረም", "ጥቅምት", "ኅዳር", "ታኅሣሥ", "ጥር", "የካቲት", "መጋቢት", "ሚያዝያ", "ግንቦት", "ሰኔ", "ሐምሌ", "ነሐሴ", "ጳጉሜን" };
            
         
         public static string Format(EthiopianDate ethiopianDate,string formatString)
