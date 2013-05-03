@@ -16,7 +16,7 @@ namespace BaakalDate
             var ethiopianDate = new EthiopianDate(dateTime);
             return ethiopianDate.ToLongDate();
         }
-        public static string ToEthiopianDateString(this DateTime dateTime,string format)
+        public static string ToEthiopianDateString(this DateTime dateTime,string format = "d/m/yyyy")
         {
             var ethiopianDate = new EthiopianDate(dateTime);
             return ethiopianDate.ToString(format);
