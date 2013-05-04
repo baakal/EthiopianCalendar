@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,6 +37,9 @@ namespace EthiopianDateUserAcceptanceTest
 
         private void EthiopianDateCode_Load(object sender, EventArgs e)
         {
+            DateTime myDT = new DateTime(2002, 4, 3, new GregorianCalendar());
+            // Uses the default calendar of the InvariantCulture.
+            Calendar myCal = CultureInfo.InvariantCulture.Calendar;
 
         }
        

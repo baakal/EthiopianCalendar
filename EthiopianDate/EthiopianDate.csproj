@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EthiopianCalendar.cs" />
     <Compile Include="EthiopianDate.cs" />
     <Compile Include="EthiopianDateConverter.cs" />
     <Compile Include="EthiopianDateExtension.cs" />
