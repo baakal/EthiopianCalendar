@@ -24,7 +24,14 @@ namespace EthiopianDateUserAcceptanceTest
             txtEthiopianShortDate.Text = SelectedDate.ToEthiopianDateString();
             txtEthiopianLongDate.Text = SelectedDate.ToEthiopianLongDateString();
             txtEthiopianDate.Text = SelectedDate.ToEthiopianDateString();
-            txtEthiopianDate.Text = SelectedDate.ToEthiopianDateString(textBox4.Text);
+            txtEthiopianDateCustom.Text = SelectedDate.ToEthiopianDateString(textBox4.Text);
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Date");
+            DataRow dr = dt.NewRow();
+            dr["date"] = dateTimePicker1.Value;
+            dt.Rows.Add(dr);
+            dataGridView1.DataSource = dt;
+
         }
 
         private void EthiopianDateCode_Load(object sender, EventArgs e)

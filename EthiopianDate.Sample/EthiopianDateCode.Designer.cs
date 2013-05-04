@@ -1,4 +1,6 @@
-﻿namespace EthiopianDateUserAcceptanceTest
+﻿using BaakalDate;
+
+namespace EthiopianDateUserAcceptanceTest
 {
     partial class EthiopianDateCode
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.txtEthiopianShortDate = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,6 +42,9 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.txtEthiopianDateCustom = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -130,11 +136,31 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "ToEthiopianDateString";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.date});
+            this.dataGridView1.Location = new System.Drawing.Point(96, 203);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 11;
+            // 
+            // date
+            // 
+            this.date.DataPropertyName = "date";
+            dataGridViewCellStyle2.Format = "EthiopianDate";
+            dataGridViewCellStyle2.NullValue = null;
+            this.date.DefaultCellStyle = dataGridViewCellStyle2;
+            this.date.HeaderText = "Column1";
+            this.date.Name = "date";
+            // 
             // EthiopianDateCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(556, 168);
+            this.ClientSize = new System.Drawing.Size(556, 428);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtEthiopianDateCustom);
             this.Controls.Add(this.textBox4);
@@ -149,6 +175,7 @@
             this.Name = "EthiopianDateCode";
             this.Text = "EthiopianDateCode";
             this.Load += new System.EventHandler(this.EthiopianDateCode_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +194,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox txtEthiopianDateCustom;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn date;
     }
 }

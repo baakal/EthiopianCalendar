@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace BaakalDate
 {
-    public class EthiopianDateFormat
+    public class EthiopianDateFormatProvider:IFormatProvider
     {
         static readonly string[] Months = { "Unknown Months", "መስከረም", "ጥቅምት", "ኅዳር", "ታኅሣሥ", "ጥር", "የካቲት", "መጋቢት", "ሚያዝያ", "ግንቦት", "ሰኔ", "ሐምሌ", "ነሐሴ", "ጳጉሜን" };
            
         
-        public static string Format(EthiopianDate ethiopianDate,string formatString)
+        public static string FormatToEthiopianDate(EthiopianDate ethiopianDate,string formatString)
         {
             formatString = formatString.Replace("mmm", Months[ethiopianDate.Month]);
             formatString = formatString.Replace("mm", ethiopianDate.Month.ToString("00"));
@@ -25,6 +25,13 @@ namespace BaakalDate
             return formatString;
         }
 
-        
+        #region Implementation of IFormatProvider
+
+        public object GetFormat(Type formatType)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
     }
 }

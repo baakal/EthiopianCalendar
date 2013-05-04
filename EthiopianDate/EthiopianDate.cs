@@ -37,7 +37,7 @@ namespace BaakalDate
 
         public  string ToString(string format)
         {
-            return EthiopianDateFormat.Format(this, format);
+            return EthiopianDateFormatProvider.FormatToEthiopianDate(this, format);
         }
 
         public String ToLongDate()

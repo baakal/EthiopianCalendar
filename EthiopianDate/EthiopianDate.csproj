@@ -42,7 +42,7 @@
     <Compile Include="EthiopianDate.cs" />
     <Compile Include="EthiopianDateConverter.cs" />
     <Compile Include="EthiopianDateExtension.cs" />
-    <Compile Include="EthiopianDateFormat.cs" />
+    <Compile Include="EthiopianDateFormatProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
