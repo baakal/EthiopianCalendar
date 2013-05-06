@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BaakalDate
+namespace EthiopianCalendar.Format
 {
     public class EthiopianDateFormatProvider:IFormatProvider
     {
@@ -21,7 +21,6 @@ namespace BaakalDate
             formatString = formatString.Replace("d", ethiopianDate.Day.ToString());
             formatString = formatString.Replace("yyyy", ethiopianDate.Year.ToString());
             formatString = formatString.Replace("yy", (ethiopianDate.Year%1000).ToString("00"));
-            
             return formatString;
         }
 
@@ -29,7 +28,7 @@ namespace BaakalDate
 
         public object GetFormat(Type formatType)
         {
-            throw new NotImplementedException();
+            return new EthiopianDateCustomFormatter();
         }
 
         #endregion

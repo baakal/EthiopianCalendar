@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthiopianDate", "EthiopianDate\EthiopianDate.csproj", "{9DE1E9F2-5B8D-4ACE-85BD-1AB7489E04E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthiopianCalendar", "EthiopianCalendar\EthiopianCalendar.csproj", "{9DE1E9F2-5B8D-4ACE-85BD-1AB7489E04E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthiopianDate.Sample", "EthiopianDate.Sample\EthiopianDate.Sample.csproj", "{AB5C1D28-5283-4048-9F7F-484D87998397}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthiopianCalendar.Sample", "EthiopianCalendar.Sample\EthiopianCalendar.Sample.csproj", "{AB5C1D28-5283-4048-9F7F-484D87998397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthiopianDate.Test", "EthiopianDate.Test\EthiopianDate.Test.csproj", "{9CC49CE4-2B9B-4AF6-BCE9-B8E3DD554F25}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthiopianCalendar.Test", "EthiopianCalendar.Test\EthiopianCalendar.Test.csproj", "{9CC49CE4-2B9B-4AF6-BCE9-B8E3DD554F25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

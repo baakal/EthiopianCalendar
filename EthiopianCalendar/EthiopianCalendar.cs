@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using EthiopianCalendar.Conversion;
 
-namespace EthiopianDate
+namespace EthiopianCalendar
 {
     public class EthiopianCalendar:Calendar
     {
@@ -19,7 +16,7 @@ namespace EthiopianDate
 		
 		public override int[] Eras
 		{
-			get { return new int[] { 1 }; }
+			get { return new int[] { 0,1 }; }
 		}
 
 			
@@ -30,21 +27,21 @@ namespace EthiopianDate
 
         public override DateTime MaxSupportedDateTime
 		{
-			get { return new DateTime(2199, 12, 31, 23, 59, 59); }
+			get { return new DateTime(2199, 12, 31, 23, 59, 59,this); }
 		}
 
 
        #endregion
 
-
-
-
         #region Overrides of Calendar
 
         public override DateTime AddMonths(DateTime time, int months)
         {
-            int NewMonth = time.Month + 12;
-            time.Month
+            int month = time.Month + months;
+             month = month%13;
+            int year = time.Year + time.Month/13;
+           
+            return new DateTime(year, month,time.Day,this);
         }
 
         public override DateTime AddYears(DateTime time, int years)
@@ -114,7 +111,7 @@ namespace EthiopianDate
 
         public override DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era)
         {
-            throw new NotImplementedException();
+            return EthiopianDateConverter.ToGregorianDate(year,month,day);
         }
         #endregion
     }

@@ -6,15 +6,15 @@ using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BaakalDate;
 
-namespace EthiopianDateUserAcceptanceTest
+namespace EthiopianCalendar.Sample
 {
-    public partial class EthiopianDateCode : Form
+    public partial class EthiopianCalendarSampleForm : Form
     {
-        public EthiopianDateCode()
+        public EthiopianCalendarSampleForm()
         {
             InitializeComponent();
         }
@@ -26,21 +26,15 @@ namespace EthiopianDateUserAcceptanceTest
             txtEthiopianLongDate.Text = SelectedDate.ToEthiopianLongDateString();
             txtEthiopianDate.Text = SelectedDate.ToEthiopianDateString();
             txtEthiopianDateCustom.Text = SelectedDate.ToEthiopianDateString(textBox4.Text);
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Date");
-            DataRow dr = dt.NewRow();
-            dr["date"] = dateTimePicker1.Value;
-            dt.Rows.Add(dr);
-            dataGridView1.DataSource = dt;
-
+            EthiopianDate ethiopianDate = SelectedDate.ToEthiopianDate();
+            txtGreg.Text = ethiopianDate.ToGregorianDate().ToLongDateString();
+            txtGreg.Text = ethiopianDate.DateTime.ToLongDateString();
+            listBox1.Items.Add(SelectedDate);
         }
 
         private void EthiopianDateCode_Load(object sender, EventArgs e)
         {
-            DateTime myDT = new DateTime(2002, 4, 3, new GregorianCalendar());
-            // Uses the default calendar of the InvariantCulture.
-            Calendar myCal = CultureInfo.InvariantCulture.Calendar;
-
+            
         }
        
     }

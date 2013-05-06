@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using EthiopianCalendar.Sample;
 
 namespace EthiopianDateUserAcceptanceTest
 {
@@ -16,7 +17,7 @@ namespace EthiopianDateUserAcceptanceTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EthiopianDateCode());
+            Application.Run(new EthiopianCalendarSampleForm());
         }
     }
 }
