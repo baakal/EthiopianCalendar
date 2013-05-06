@@ -41,6 +41,19 @@
 <span class="n">EthiopianDate</span> <span class="n">ConvertedethiopianDate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EthiopianDate</span><span class="p">(</span><span class="k">new</span> <span class="n">DateTime</span><span class="p">(</span><span class="m">2015</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">));</span>
 </pre></div>
 
+<div class="highlight"><pre><span class="n">EthiopianDate</span> <span class="n">ethiopianDate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EthiopianDate</span><span class="p">(</span><span class="m">2005</span><span class="p">,</span> <span class="m">08</span><span class="p">,</span> <span class="m">8</span><span class="p">);</span> <span class="c1">//year,month,day</span>
+<span class="n">DateTime</span> <span class="n">dateTime</span> <span class="p">=</span> <span class="n">ethiopianDate</span><span class="p">.</span><span class="n">DateTime</span><span class="p">;</span> <span class="c1">//Converted to GregorianCalendar</span>
+<span class="n">ethiopianDate</span><span class="p">.</span><span class="n">ToGregorianDate</span><span class="p">();</span> <span class="c1">//Converted To GregrorianCalendar</span>
+</pre></div>
+
+<h3>Fluent</h3>
+
+<div class="highlight"><pre><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianLongDateString</span><span class="p">();</span>
+<span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianShortDateString</span><span class="p">();</span>
+<span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianDateString</span><span class="p">(</span><span class="s">"ddd MMMM dd, YYYY"</span><span class="p">);</span>
+<span class="n">EthiopianDate</span> <span class="n">ethiopianDate</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianDate</span><span class="p">();</span>
+</pre></div>
+
 <h3>Authors and Contributors</h3>
 
 <p>Baakal Tesfaye <a href="https://github.com/baakal" class="user-mention">@baakal</a></p>
