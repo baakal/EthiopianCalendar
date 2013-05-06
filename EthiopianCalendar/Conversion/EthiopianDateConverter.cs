@@ -21,7 +21,7 @@ namespace EthiopianCalendar.Conversion
             year = 4 * ((jdn - JdOffset) / 1461) + r / 365 - r / 1460;
             month = n/30 + 1;
             day = n%30 + 1;
-            return new EthiopianDate(day,month,year);
+            return new EthiopianDate(year,month,day);
             
         }
         

@@ -16,6 +16,8 @@ namespace EthiopianCalendar
 
         public int Day { get { return _day; } }
 
+        public int DayOfWeek { get { return (int) _dateTime.DayOfWeek; } }
+
         private DateTime _dateTime;
         
         public  DateTime DateTime {get { return new DateTime(_dateTime.Ticks); } }
@@ -61,9 +63,9 @@ namespace EthiopianCalendar
             serializable.GetObjectData(info,context);
         }
 
-        string IFormattable.ToString(string format, IFormatProvider formatProvider)
+        public string ToString(string format, IFormatProvider formatProvider)
         {
-            var formatter = (ICustomFormatter) formatProvider.GetFormat(typeof (ICustomFormatter));
+            var formatter = (EthiopianDateCustomFormatter) formatProvider.GetFormat(typeof (ICustomFormatter));
             return formatter.Format(format, this, formatProvider);
         }
 
@@ -86,19 +88,20 @@ namespace EthiopianCalendar
             return Type.GetTypeCode(this.GetType());
         }
       
-        public  string ToString(string format)
+        public string ToString(string format)
         {
-            return EthiopianDateFormatProvider.FormatToEthiopianDate(this, format);
+            IFormatProvider formatProvider = new EthiopianDateFormatProvider();
+            return ToString(format, formatProvider);
         }
-
+    
         public String ToLongDateString()
         {
-            return ToString("mmm dd,yyyy");
+            return ToString("ddd MMMM dd,yyyy");
         }
    
         public string ToShortDateString()
         {
-            return ToString("dd/mm/yy");
+            return ToString("dd/MM/yy");
         }
 
         public DateTime ToGregorianDate()
@@ -106,9 +109,6 @@ namespace EthiopianCalendar
             return _dateTime;
         }
 
-       
-      
-       
         #region Implementation of IConvertible
         
         public bool ToBoolean(IFormatProvider provider)

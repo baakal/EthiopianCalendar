@@ -17,7 +17,7 @@ namespace EthiopianCalendar
             return ethiopianDate.ToLongDateString();
         }
 
-        public static string ToEthiopianDateString(this DateTime dateTime,string format = "d/m/yyyy")
+        public static string ToEthiopianDateString(this DateTime dateTime,string format = "MMMM dd, yyyy")
         {
             var ethiopianDate = new EthiopianDate(dateTime);
             return ethiopianDate.ToString(format);

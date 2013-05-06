@@ -26,10 +26,10 @@ namespace EthiopianCalendar.Sample
             txtEthiopianLongDate.Text = SelectedDate.ToEthiopianLongDateString();
             txtEthiopianDate.Text = SelectedDate.ToEthiopianDateString();
             txtEthiopianDateCustom.Text = SelectedDate.ToEthiopianDateString(textBox4.Text);
+
             EthiopianDate ethiopianDate = SelectedDate.ToEthiopianDate();
             txtGreg.Text = ethiopianDate.ToGregorianDate().ToLongDateString();
-            txtGreg.Text = ethiopianDate.DateTime.ToLongDateString();
-            listBox1.Items.Add(SelectedDate);
+            
         }
 
         private void EthiopianDateCode_Load(object sender, EventArgs e)

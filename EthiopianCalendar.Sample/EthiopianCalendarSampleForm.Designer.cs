@@ -116,7 +116,7 @@ namespace EthiopianCalendar.Sample
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(65, 20);
             this.textBox4.TabIndex = 8;
-            this.textBox4.Text = "dd/mm/yyyy";
+            this.textBox4.Text = "dd/MM/yyyy";
             // 
             // txtEthiopianDateCustom
             // 
@@ -159,7 +159,7 @@ namespace EthiopianCalendar.Sample
             this.listBox1.Size = new System.Drawing.Size(200, 186);
             this.listBox1.TabIndex = 14;
             // 
-            // EthiopianDateCode
+            // EthiopianCalendarSampleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -178,7 +178,7 @@ namespace EthiopianCalendar.Sample
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtEthiopianShortDate);
             this.Controls.Add(this.dateTimePicker1);
-            this.Name = "EthiopianDateCode";
+            this.Name = "EthiopianCalendarSampleForm";
             this.Text = "EthiopianDateCode";
             this.Load += new System.EventHandler(this.EthiopianDateCode_Load);
             this.ResumeLayout(false);
