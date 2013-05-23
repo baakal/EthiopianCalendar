@@ -36,6 +36,13 @@ namespace EthiopianCalendar.Sample
         {
             
         }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            DateConverterSample dateConverterSample = new DateConverterSample();
+            dateConverterSample.ShowDialog(this);
+
+        }
        
     }
 }

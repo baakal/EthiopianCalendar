@@ -44,6 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateConverterSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateConverterSample.Designer.cs">
+      <DependentUpon>DateConverterSample.cs</DependentUpon>
+    </Compile>
     <Compile Include="EthiopianCalendarSampleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -52,6 +58,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DateConverterSample.resx">
+      <DependentUpon>DateConverterSample.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EthiopianCalendarSampleForm.resx">
       <DependentUpon>EthiopianCalendarSampleForm.cs</DependentUpon>
     </EmbeddedResource>

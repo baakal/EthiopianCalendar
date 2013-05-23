@@ -43,6 +43,7 @@ namespace EthiopianCalendar.Sample
             this.label5 = new System.Windows.Forms.Label();
             this.txtGreg = new System.Windows.Forms.TextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.btnTest = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -159,11 +160,22 @@ namespace EthiopianCalendar.Sample
             this.listBox1.Size = new System.Drawing.Size(200, 186);
             this.listBox1.TabIndex = 14;
             // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(448, 12);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 15;
+            this.btnTest.Text = "Test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
+            // 
             // EthiopianCalendarSampleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 461);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtGreg);
@@ -202,5 +214,6 @@ namespace EthiopianCalendar.Sample
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtGreg;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Button btnTest;
     }
 }
