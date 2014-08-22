@@ -2,9 +2,9 @@
 <html>
 
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Ethiopian Calendar : የኢትዮጵያ ዘመን አቆጣጠር" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Ethiopian Calendar : የኢትዮጵያ ዘመን አቆጣጠር">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -31,33 +31,37 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to Ethiopian Calendar Pages.</h3>
+        <h3>
+<a name="welcome-to-ethiopian-calendar-pages" class="anchor" href="#welcome-to-ethiopian-calendar-pages"><span class="octicon octicon-link"></span></a>Welcome to Ethiopian Calendar Pages.</h3>
 
 <p>The Ethiopian Calendar is based on the ancient Coptic calendar and still in use today in Ethiopia. It has twelve 30-day months and a 13th month of five days (six days in leap years). Download the tool at <a href="https://nuget.org/packages/EthiopianCalendar/">Nuget</a></p>
 
-<h3>EthiopianDate</h3>
+<h3>
+<a name="ethiopiandate" class="anchor" href="#ethiopiandate"><span class="octicon octicon-link"></span></a>EthiopianDate</h3>
 
 <p>Convert From gregorian To EthiopianDate</p>
 
-<div class="highlight"><pre><span class="n">EthiopianDate</span> <span class="n">ethiopianDate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EthiopianDate</span><span class="p">(</span><span class="k">new</span> <span class="n">DateTime</span><span class="p">(</span><span class="m">2015</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">));</span>
+<div class="highlight highlight-C#"><pre><span class="n">EthiopianDate</span> <span class="n">ethiopianDate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EthiopianDate</span><span class="p">(</span><span class="k">new</span> <span class="n">DateTime</span><span class="p">(</span><span class="m">2015</span><span class="p">,</span><span class="m">5</span><span class="p">,</span><span class="m">6</span><span class="p">));</span>
 </pre></div>
 
 <p>Convert From Ethiopian To Gregorian</p>
 
-<div class="highlight"><pre><span class="n">EthiopianDate</span> <span class="n">ethiopianDate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EthiopianDate</span><span class="p">(</span><span class="m">2005</span><span class="p">,</span> <span class="m">08</span><span class="p">,</span> <span class="m">8</span><span class="p">);</span> <span class="c1">//year,month,day</span>
+<div class="highlight highlight-C#"><pre><span class="n">EthiopianDate</span> <span class="n">ethiopianDate</span> <span class="p">=</span> <span class="k">new</span> <span class="n">EthiopianDate</span><span class="p">(</span><span class="m">2005</span><span class="p">,</span> <span class="m">08</span><span class="p">,</span> <span class="m">8</span><span class="p">);</span> <span class="c1">//year,month,day</span>
 <span class="n">DateTime</span> <span class="n">dateTime</span> <span class="p">=</span> <span class="n">ethiopianDate</span><span class="p">.</span><span class="n">DateTime</span><span class="p">;</span> <span class="c1">//Converted to GregorianCalendar</span>
 <span class="n">ethiopianDate</span><span class="p">.</span><span class="n">ToGregorianDate</span><span class="p">();</span> <span class="c1">//Converted To GregrorianCalendar</span>
 </pre></div>
 
-<h3>Fluent</h3>
+<h3>
+<a name="fluent" class="anchor" href="#fluent"><span class="octicon octicon-link"></span></a>Fluent</h3>
 
-<div class="highlight"><pre><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianLongDateString</span><span class="p">();</span>
+<div class="highlight highlight-C#"><pre><span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianLongDateString</span><span class="p">();</span>
 <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianShortDateString</span><span class="p">();</span>
-<span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianDateString</span><span class="p">(</span><span class="s">"ddd MMMM dd, YYYY"</span><span class="p">);</span>
+<span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianDateString</span><span class="p">(</span><span class="s">"ddd MMMM dd, yyyy"</span><span class="p">);</span>
 <span class="n">EthiopianDate</span> <span class="n">ethiopianDate</span> <span class="p">=</span> <span class="n">DateTime</span><span class="p">.</span><span class="n">Now</span><span class="p">.</span><span class="n">ToEthiopianDate</span><span class="p">();</span>
 </pre></div>
 
-<h3>Authors and Contributors</h3>
+<h3>
+<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
 <p>Baakal Tesfaye <a href="https://github.com/baakal" class="user-mention">@baakal</a></p>
       </section>
