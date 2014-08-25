@@ -34,7 +34,7 @@ namespace EthiopianCalendar.Sample
 
         private void EthiopianDateCode_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnTest_Click(object sender, EventArgs e)

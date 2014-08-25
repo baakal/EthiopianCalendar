@@ -40,7 +40,7 @@ namespace EthiopianCalendar.Format
                format = format.Replace("yyyyy", ethiopianDate.Year.ToString("00000"));
                format = format.Replace("yyyy", ethiopianDate.Year.ToString("0000"));
                format = format.Replace("yy", (ethiopianDate.Year%1000).ToString("00"));
-               format = format.Replace("yy", (ethiopianDate.Year%1000).ToString());
+               format = format.Replace("y", (ethiopianDate.Year%1000).ToString());
     
             return format;
         }
