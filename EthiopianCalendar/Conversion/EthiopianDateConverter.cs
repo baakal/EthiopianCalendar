@@ -1,5 +1,5 @@
 using System;
-using System.Drawing;
+using System.IO;
 
 namespace EthiopianCalendar.Conversion
 {
@@ -8,8 +8,26 @@ namespace EthiopianCalendar.Conversion
         private const int JdOffset = 1723856;
      
         #region To Ethiopian Date
+
+         
+        public static EthiopianDate ToEthiopianDate(DateTime dateTime)
+        {
+            int jdn = toJDN(dateTime);
+            return ToEthiopianDate( jdn);
+           
+        }
+
+        private static int toJDN(DateTime dateTime)
+        {
+            int a, y, m;
+            a = (14 - dateTime.Month)/12;
+            y = dateTime.Year + 4800 - a;
+            m = dateTime.Month + 12 * a - 3;
+
+            return dateTime.Day + (153 * m + 2)/5 + 365 * y + y/4 - y / 100 + y /400 - 32045;
+        }
         
-        public static  EthiopianDate ToEthiopianDate(int jdn)
+        private static  EthiopianDate ToEthiopianDate(int jdn)
         {
             //Formula from Dr. Berhanu Beyene and Manfred Kudlek
             int year, month, day,r,n;
@@ -24,29 +42,21 @@ namespace EthiopianCalendar.Conversion
             return new EthiopianDate(year,month,day);
             
         }
-        
-        public static EthiopianDate ToEthiopianDate(DateTime dateTime)
-        {
-            int jdn = ToJDN(dateTime);
-            return ToEthiopianDate( jdn);
-           
-        }
-
-        public static int ToJDN(DateTime dateTime)
-        {
-            int a, y, m;
-            a = (14 - dateTime.Month)/12;
-            y = dateTime.Year + 4800 - a;
-            m = dateTime.Month + 12 * a - 3;
-
-            return dateTime.Day + (153 * m + 2)/5 + 365 * y + y/4 - y / 100 + y /400 - 32045;
-        }
-        
-        #endregion
+       
+           #endregion
         
         #region To Gregorian Date
-       
-        public static   DateTime ToGregorianDate(int jdn)
+
+        public static DateTime ToGregorianDate(int year, int month, int day)
+        {
+            
+               validate(year, month, day);
+               var jdn = fromEthiopianDateToJDN(year, month, day);
+               return toGregorianDate(jdn);
+            
+        }
+
+        private static DateTime toGregorianDate(int jdn)
         {
            int year, month, day;
 
@@ -64,24 +74,21 @@ namespace EthiopianCalendar.Conversion
  
             return new DateTime(year,month,day);
         }
-       
-        public static DateTime ToGregorianDate(int year, int month, int day)
+
+        private static void validate(int year, int month, int day)
         {
-            int jdn = FromEthiopianDateToJDN(year, month, day);
-            return ToGregorianDate(jdn);
+            if (month < 1 || month > 13 || (month == 13 && year % 4 == 3 && day > 6) || (month == 13 && year % 4 != 3 && day > 5) || day < 1 || day > 30)
+            {
+                throw new ArgumentOutOfRangeException("Year, Month, and Day parameters describe an un-representable EthiopianDateTime.");
+            }
         }
 
-        private static int FromEthiopianDateToJDN(int year, int month, int day)
+        private static int fromEthiopianDateToJDN(int year, int month, int day)
         {
             return (JdOffset + 365) + 365 * (year - 1) + year / 4 + 30 * month +
                 day - 31;
         }
-  
-        public static int ToJDN(EthiopianDate ethiopianDate)
-        {
-            return FromEthiopianDateToJDN(ethiopianDate.Year, ethiopianDate.Month, ethiopianDate.Day);
-        }
-
+        
         #endregion
 
 
