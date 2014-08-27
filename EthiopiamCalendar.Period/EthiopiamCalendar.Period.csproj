@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EthiopianCalendar">
-      <HintPath>..\packages\EthiopianCalendar.1.0.2\lib\net45\EthiopianCalendar.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -47,7 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\EthiopianCalendar\EthiopianCalendar.csproj">
+      <Project>{9de1e9f2-5b8d-4ace-85bd-1ab7489e04e9}</Project>
+      <Name>EthiopianCalendar</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

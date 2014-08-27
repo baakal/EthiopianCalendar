@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("EthiopianCalendar")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("An Ethiopian Date Converter")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Baakal")]
 [assembly: AssemblyProduct("EthiopianCalendar")]
