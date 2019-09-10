@@ -1,0 +1,17 @@
+C:\Users\Baakal\source\repos\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.csproj.CoreCompileInputs.cache
+C:\Users\Baakal\source\repos\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.AssemblyInfoInputs.cache
+C:\Users\Baakal\source\repos\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.AssemblyInfo.cs
+C:\Users\Baakal\source\repos\EthiopianCalendar\EthiopianCalendar\bin\Debug\netstandard2.0\EthiopianCalendar.deps.json
+C:\Users\Baakal\source\repos\EthiopianCalendar\EthiopianCalendar\bin\Debug\netstandard2.0\EthiopianCalendar.dll
+C:\Users\Baakal\source\repos\EthiopianCalendar\EthiopianCalendar\bin\Debug\netstandard2.0\EthiopianCalendar.pdb
+C:\Users\Baakal\source\repos\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.dll
+C:\Users\Baakal\source\repos\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.pdb
+C:\File\repository\ethiopianCalendar\EthiopianCalendar\EthiopianCalendar\bin\Debug\netstandard2.0\EthiopianCalendar.deps.json
+C:\File\repository\ethiopianCalendar\EthiopianCalendar\EthiopianCalendar\bin\Debug\netstandard2.0\EthiopianCalendar.dll
+C:\File\repository\ethiopianCalendar\EthiopianCalendar\EthiopianCalendar\bin\Debug\netstandard2.0\EthiopianCalendar.pdb
+C:\File\repository\ethiopianCalendar\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.csprojAssemblyReference.cache
+C:\File\repository\ethiopianCalendar\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.csproj.CoreCompileInputs.cache
+C:\File\repository\ethiopianCalendar\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.AssemblyInfoInputs.cache
+C:\File\repository\ethiopianCalendar\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.AssemblyInfo.cs
+C:\File\repository\ethiopianCalendar\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.dll
+C:\File\repository\ethiopianCalendar\EthiopianCalendar\EthiopianCalendar\obj\Debug\netstandard2.0\EthiopianCalendar.pdb
