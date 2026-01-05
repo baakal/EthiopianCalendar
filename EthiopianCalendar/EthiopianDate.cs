@@ -54,7 +54,7 @@ namespace EthiopianCalendar
 
         public override string ToString()
         {
-            return ToString("dd/mm/yyyy");
+            return ToString("dd/MM/yyyy");
         }
 
         void ISerializable.GetObjectData(SerializationInfo info, StreamingContext context)
